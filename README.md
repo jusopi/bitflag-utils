@@ -2,6 +2,9 @@
 
 A small javascript utility API for working w. bitflags.
 
+##understading bitflags
+Check out this article I wrote back in 2012 for a better understanding of how bitflags work. http://jwopitz.wordpress.com/2012/02/13/using-bitflags-and-bitwise-math/
+
 ##install
 ```javascript
 npm install bitflag-utils --save
