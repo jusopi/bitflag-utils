@@ -1,10 +1,10 @@
 {
   "name": "bitflag-utils",
-  "version": "0.0.1",
-  "description": "bitflag-utils\r =============",
+  "version": "0.1.0",
+  "description": "a small utility API for working w. bitflags",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./tests/tests.js --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,12 @@
     "javascript",
     "js"
   ],
-  "author": "jusopi",
+  "author": "jusopi <jusopi@gmail.com> (http://jwopitz.wordpress.com/)",
   "bugs": {
     "url": "https://github.com/jusopi/bitflag-utils/issues"
   },
-  "homepage": "https://github.com/jusopi/bitflag-utils"
+  "homepage": "https://github.com/jusopi/bitflag-utils",
+  "devDependencies": {
+    "mocha": "^1.20.1"
+  }
 }

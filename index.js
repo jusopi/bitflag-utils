@@ -1,9 +1,9 @@
 /**
- * Created by jopitz on 1/8/2013.
+ * Created by jusopi on 1/8/2013.
  */
 "use strict";
 
-var api = {
+module.exports = {
 
     hasFlags: function( flagsToCheckFor, currentFlags )
     {
