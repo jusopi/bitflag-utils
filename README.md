@@ -3,12 +3,12 @@
 A small javascript utility API for working w. bitflags.
 
 ##install
-```
+```javascript
 npm install bitflag-utils --save
 ```
 
 ##require
-```
+```javascript
 var bitflagUtils = require('bitflag-utils');
 ```
 
@@ -22,7 +22,7 @@ var bitflagUtils = require('bitflag-utils');
 boolean - true if the flag(s) were present or false otherwise.
 
 ####example
-```
+```javascript
 var crntFlags = 1 << 0 | 1 << 1 | 1 << 4;
 bitflagUtils.hasFlags( 1 << 1, crntFlags );//returns true;
 ```
@@ -36,9 +36,10 @@ bitflagUtils.hasFlags( 1 << 1, crntFlags );//returns true;
 number - a number value representing the current flag(s) and those added to it.
 
 ####example
-```
-var crntFlags = 1 << 0 | 1 << 1 | 1 << 4;
-bitflagUtils.addFlags( 1 << 2, crntFlags );//returns 1 << 0 | 1 << 1 | 1 << 2 | 1 << 4
+```javascript
+var crntFlags = 1 << 0 | 1 << 1 | 1 << 4; //19
+bitflagUtils.addFlags( 1 << 2, crntFlags ); //+4
+//returns 1 << 0 | 1 << 1 | 1 << 2 | 1 << 4 (or 23)
 ```
 
 ###delFlags
@@ -50,7 +51,8 @@ bitflagUtils.addFlags( 1 << 2, crntFlags );//returns 1 << 0 | 1 << 1 | 1 << 2 | 
 number - a number value representing the current flag(s) and those removed from it.
 
 ####example
-```
-var crntFlags = 1 << 0 | 1 << 1 | 1 << 4;
-bitflagUtils.delFlags( 1 << 1, crntFlags ); //returns 1 << 0 | 1 << 4;
+```javascript
+var crntFlags = 1 << 0 | 1 << 1 | 1 << 4; //19
+bitflagUtils.delFlags( 1 << 1, crntFlags ); //-2
+//returns 1 << 0 | 1 << 4; (or 17)
 ```
