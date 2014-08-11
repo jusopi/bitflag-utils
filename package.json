@@ -1,6 +1,6 @@
 {
   "name": "bitflag-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A small javascript utility API for working w. bitflags.",
   "main": "index.js",
   "scripts": {
