@@ -1,59 +1,59 @@
-#bitflag-utils
+# bitflag-utils
 
 A small javascript utility API for working w. bitflags.
 
-##understading bitflags
+## understading bitflags
 Check out this article I wrote back in 2012 for a better understanding of how bitflags work. http://jwopitz.wordpress.com/2012/02/13/using-bitflags-and-bitwise-math/
 
-##install
+## install
 ```javascript
 npm install bitflag-utils --save
 ```
 
-##require
+## require
 ```javascript
 var bitflagUtils = require('bitflag-utils');
 ```
 
-##APIs
-###hasFlags
-####params
+## APIs
+### hasFlags
+#### params
 * flagsToCheckFor - the flag(s) to check for against the current flag(s).
 * currentFlags - the current flag(s) to check against.
 
-####returns
+#### returns
 boolean - true if the flag(s) were present or false otherwise.
 
-####example
+#### example
 ```javascript
 var crntFlags = 1 << 0 | 1 << 1 | 1 << 4;
 bitflagUtils.hasFlags( 1 << 1, crntFlags );//returns true;
 ```
 
-###addFlags
-####params
+### addFlags
+#### params
 * toAdd - the flag(s) to add to the current flag(s).
 * currentFlags - the current flag(s) to add to.
 
-####returns
+#### returns
 number - a number value representing the current flag(s) and those added to it.
 
-####example
+#### example
 ```javascript
 var crntFlags = 1 << 0 | 1 << 1 | 1 << 4; //19
 bitflagUtils.addFlags( 1 << 2, crntFlags ); //+4
 //returns 1 << 0 | 1 << 1 | 1 << 2 | 1 << 4 (or 23)
 ```
 
-###delFlags
-####params
+### delFlags
+#### params
 * toDel - the flag(s) to remove from the current flag(s).
 * currentFlags - the current flag(s) to remove from.
 
-####returns
+#### returns
 number - a number value representing the current flag(s) and those removed from it.
 
-####example
+#### example
 ```javascript
 var crntFlags = 1 << 0 | 1 << 1 | 1 << 4; //19
 bitflagUtils.delFlags( 1 << 1, crntFlags ); //-2
