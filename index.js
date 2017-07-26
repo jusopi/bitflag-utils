@@ -7,7 +7,9 @@ module.exports = {
 
     hasFlags: function( flagsToCheckFor, currentFlags )
     {
-        return flagsToCheckFor == (currentFlags & flagsToCheckFor);
+        if( flagsToCheckFor === 0 && flagsToCheckFor !== currentFlags) return false
+        else return flagsToCheckFor == (currentFlags & flagsToCheckFor);
+
     },
 
     addFlags: function( toAdd, currentFlags )
